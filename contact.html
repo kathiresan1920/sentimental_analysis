@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Details</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            transition: background-color 1s ease; /* Smooth transition for background color */
+        }
+
+        .contact-container {
+            max-width: 600px; /* Increased width */
+            padding: 50px; /* Increased padding */
+            border-radius: 15px;
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            transform: scale(1.1); /* Scale up the entire container */
+            transition: transform 0.3s ease;
+        }
+
+        .contact-title {
+            font-size: 32px; /* Increased font size */
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .contact-item {
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contact-label {
+            font-weight: bold;
+            font-size: 18px; /* Increased font size */
+        }
+
+        .contact-value a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 18px; /* Increased font size */
+        }
+
+        .contact-value a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .contact-container {
+                width: 90%;
+                padding: 30px; /* Adjusted for smaller screens */
+            }
+
+            .contact-title {
+                font-size: 28px; /* Adjusted for smaller screens */
+            }
+
+            .contact-label,
+            .contact-value {
+                font-size: 16px; /* Adjusted for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="contact-container">
+    <div class="contact-title">Contact Information</div>
+
+    <div class="contact-item">
+        <span class="contact-label">Phone:</span>
+        <span class="contact-value"><a href="tel:+1234567890">+91 8925675198</a></span>
+    </div>
+
+    <div class="contact-item">
+        <span class="contact-label">Email:</span>
+        <span class="contact-value"><a href="mailto:info@example.com">123012453265@pmu.edu</a></span>
+    </div>
+
+    <div class="contact-item">
+        <span class="contact-label">Website:</span>
+        <span class="contact-value"><a href="https://www.example.com" target="_blank">www.kathiresanmca.com</a></span>
+    </div>
+
+    <div class="contact-item">
+        <span class="contact-label">Address:</span>
+        <span class="contact-value">4,krishnan kovil Street, ammapet, thanjavur, tamilnadu, india</span>
+    </div>
+</div>
+
+<script>
+    const colors = [
+        '#ff7e5f', // Color 1
+        '#feb47b', // Color 2
+        '#86a8e7', // Color 3
+        '#91eae4', // Color 4
+        '#7f7fd5', // Color 5
+        '#ffafbd'  // Color 6
+    ];
+
+    let currentColorIndex = 0;
+
+    function changeBackgroundColor() {
+        document.body.style.backgroundColor = colors[currentColorIndex];
+        currentColorIndex = (currentColorIndex + 1) % colors.length; // Cycle through colors
+    }
+
+    // Change background color every 5 seconds
+    setInterval(changeBackgroundColor, 5000);
+    
+    // Initialize the background color
+    changeBackgroundColor();
+</script>
+
+</body>
+</html>
